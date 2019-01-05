@@ -1,0 +1,53 @@
+	Thu Dec 27 02:47 2018 Time and Allocation Profiling Report  (Final)
+
+	   main +RTS -p -RTS
+
+	total time  =       32.93 secs   (32930 ticks @ 1000 us, 1 processor)
+	total alloc = 54,176,340,296 bytes  (excludes profiling overheads)
+
+COST CENTRE      MODULE SRC               %time %alloc
+
+step.newCombined Main   main.hs:28:5-72    39.9   99.9
+step.(...)       Main   main.hs:29:5-91    27.8    0.1
+step.e1Recipe    Main   main.hs:26:5-30    12.7    0.0
+step.e2Recipe    Main   main.hs:27:5-30    11.0    0.0
+part1.ans.\      Main   main.hs:39:44-75    8.3    0.0
+
+
+                                                                                       individual      inherited
+COST CENTRE            MODULE                SRC                    no.     entries  %time %alloc   %time %alloc
+
+MAIN                   MAIN                  <built-in>             117          0    0.0    0.0   100.0  100.0
+ CAF                   Main                  <entire-module>        233          0    0.0    0.0   100.0  100.0
+  main                 Main                  main.hs:(2,1)-(9,38)   234          1    0.0    0.0   100.0  100.0
+   showsPrec           Main                  main.hs:19:17-20       236          3    0.0    0.0     0.0    0.0
+   step                Main                  main.hs:(25,1)-(34,57) 239          3    0.0    0.0     0.0    0.0
+    step.(...)         Main                  main.hs:29:5-91        241          3    0.0    0.0     0.0    0.0
+    step.e1Recipe      Main                  main.hs:26:5-30        244          3    0.0    0.0     0.0    0.0
+    step.e2Recipe      Main                  main.hs:27:5-30        245          3    0.0    0.0     0.0    0.0
+    step.newCombined   Main                  main.hs:28:5-72        242          3    0.0    0.0     0.0    0.0
+     step.toAdd        Main                  main.hs:(32,9)-(34,57) 243          6    0.0    0.0     0.0    0.0
+    step.newE1         Main                  main.hs:29:5-91        240          3    0.0    0.0     0.0    0.0
+    step.newE2         Main                  main.hs:29:5-91        246          3    0.0    0.0     0.0    0.0
+   main.game           Main                  main.hs:3:9-22         237          1    0.0    0.0     0.0    0.0
+   part1               Main                  main.hs:(38,1)-(40,33) 247          1    0.0    0.0   100.0  100.0
+    part1.ans          Main                  main.hs:39:5-96        248          1    0.0    0.0   100.0  100.0
+     part1.ans.\       Main                  main.hs:39:44-75       250      38612    8.3    0.0     8.3    0.0
+      recipes          Main                  main.hs:18:7-13        251      38612    0.0    0.0     0.0    0.0
+     step              Main                  main.hs:(25,1)-(34,57) 252      38611    0.1    0.0    91.6  100.0
+      step.e1Recipe    Main                  main.hs:26:5-30        255      38611   12.7    0.0    12.7    0.0
+      step.e2Recipe    Main                  main.hs:27:5-30        256      38611   11.0    0.0    11.0    0.0
+      step.newCombined Main                  main.hs:28:5-72        253      38611   39.9   99.9    40.0   99.9
+       step.toAdd      Main                  main.hs:(32,9)-(34,57) 254      50008    0.1    0.0     0.1    0.0
+      step.(...)       Main                  main.hs:29:5-91        258      38610   27.8    0.1    27.8    0.1
+      step.newE1       Main                  main.hs:29:5-91        257      38610    0.0    0.0     0.0    0.0
+      step.newE2       Main                  main.hs:29:5-91        259      38610    0.0    0.0     0.0    0.0
+     recipes           Main                  main.hs:18:7-13        249          1    0.0    0.0     0.0    0.0
+  newGame              Main                  main.hs:22:1-24        238          1    0.0    0.0     0.0    0.0
+ CAF                   GHC.Conc.Signal       <entire-module>        224          0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Encoding       <entire-module>        214          0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Encoding.Iconv <entire-module>        212          0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Handle.FD      <entire-module>        204          0    0.0    0.0     0.0    0.0
+ CAF                   GHC.Show              <entire-module>        190          0    0.0    0.0     0.0    0.0
+ CAF                   GHC.IO.Handle.Text    <entire-module>        144          0    0.0    0.0     0.0    0.0
+ main                  Main                  main.hs:(2,1)-(9,38)   235          0    0.0    0.0     0.0    0.0

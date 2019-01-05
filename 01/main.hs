@@ -17,5 +17,3 @@ part2 xs = part2' Set.empty freqs
           part2' s (x:xs) = if x `Set.member` s 
                               then x 
                               else part2' (x `Set.insert` s) xs
-
-
